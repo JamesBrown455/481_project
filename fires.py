@@ -8,3 +8,13 @@
 # and
 # Dylan Gosselin <>
 #
+
+# Imports
+from sklearn import svm
+from sklearn import preprocessing
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
+
+
+def read_file():
+    print("Temp")
