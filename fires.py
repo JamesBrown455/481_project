@@ -16,5 +16,13 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 
+# Method that Reads the CVS File
 def read_file():
     print("Temp")
+
+
+# Main Method
+def main():
+    read_file()
+
+main()
