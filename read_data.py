@@ -1,10 +1,7 @@
-#  fires.py
-#
 # 2018
 # James Brown <brownj78@southernct.edu>
 # and
 # Dylan Gosselin <>
-#
 
 
 def processData(data):
