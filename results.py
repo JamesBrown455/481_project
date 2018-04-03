@@ -3,7 +3,7 @@
 # 2018
 # James Brown <brownj78@southernct.edu>
 # and
-# Dylan Gosselin <>
+# Dylan Gosselin <gosselind1@southernct.edu>
 #
 
 # Imports
