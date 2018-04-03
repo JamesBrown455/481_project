@@ -9,14 +9,17 @@
 # Imports
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import precision_score
 
 
 # Calculate the Results
 def calc_results(results_list, true_list):
     results_matrix = confusion_matrix(results_list, true_list)
     accuracy = accuracy_score(results_list, true_list)
-    
     print("Confusion Matrix")
     print(results_matrix)
     print()
-    print("Accuracy: " + str(accuracy))
+    print("Accuracy: ")
+    print(str(accuracy * 100) + "%")
+

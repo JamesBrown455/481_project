@@ -20,7 +20,7 @@ def divide_data(data_list, label_list):
 
     i = 0
     counter = 0
-    while i < label_list.lenght:
+    while i < len(label_list):
 
         if counter < 5:
             train_list.append(data_list[i])
@@ -29,6 +29,7 @@ def divide_data(data_list, label_list):
         if counter == 5:
             test_list.append(data_list[i])
             test_label.append(label_list[i])
+            counter = 0
 
         counter += 1
         i += 1
@@ -53,7 +54,7 @@ def run_svm(train, train_label, test):
                          gamma='auto',
                          kernel='linear',
                          max_iter=-1,
-                         probability=True,
+                         probability=False,
                          random_state=None,
                          shrinking=False,
                          tol=0.0001,
