@@ -32,6 +32,7 @@ def processData(data):
     for index in sorted(INDICIESTOIGNORE, reverse=True):
         del(data[index])
     sample = list(map(float, data))
+    sample = sample + generateCalculatedFeatures(sample)
 
     return sample, trueValue
 
@@ -41,7 +42,6 @@ def classifyTrueValue(trueInput):
     MEDIUMDAMAGE = 2
     LARGEDAMAGE = 3
     SEVEREDAMAGE = 4
-
     trueValue = None
 
     if trueInput == 0:
@@ -56,6 +56,17 @@ def classifyTrueValue(trueInput):
         trueValue = SEVEREDAMAGE
 
     return trueValue
+
+
+def generateCalculatedFeatures(sample):
+    calculatedFeatures = [0.0]*4
+    # Refer to document for these value names
+    calculatedFeatures[0] = sample[5] / (sample[0] + sample[1] + sample[2])
+    calculatedFeatures[1] = sample[4] / sample[5]
+    calculatedFeatures[2] = sample[3] / sample[6]
+    calculatedFeatures[3] = sample[2] / sample[5]
+
+    return calculatedFeatures
 
 
 def tester():
