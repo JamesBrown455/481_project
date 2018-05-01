@@ -50,7 +50,7 @@ def classifyTrueValue(trueInput):
         trueValue = LIGHTDAMAGE
     elif trueInput < 75:
         trueValue = MEDIUMDAMAGE
-    elif trueInput < 150:
+    elif trueInput < 200:
         trueValue = LARGEDAMAGE
     else:
         trueValue = SEVEREDAMAGE
@@ -59,12 +59,12 @@ def classifyTrueValue(trueInput):
 
 
 def generateCalculatedFeatures(sample):
-    calculatedFeatures = [0.0]*4
+    calculatedFeatures = []
     # Refer to document for these value names
-    calculatedFeatures[0] = sample[5] / (sample[0] + sample[1] + sample[2])
-    calculatedFeatures[1] = sample[4] / sample[5]
-    calculatedFeatures[2] = sample[3] / sample[6]
-    calculatedFeatures[3] = sample[2] / sample[5]
+    calculatedFeatures.append(sample[5] / (sample[0] + sample[1] + sample[2]))
+    calculatedFeatures.append(sample[4] / sample[5])
+    calculatedFeatures.append(sample[3] / sample[6])
+    calculatedFeatures.append(sample[2] / sample[5])
 
     return calculatedFeatures
 
